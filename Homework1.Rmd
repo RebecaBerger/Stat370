@@ -1,0 +1,40 @@
+---
+title: "HW 01"
+author: "Rebeca Berger"
+date: "February 14, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+``` {r source}
+quad <- function(x, a=0,b=0,c=0) {
+  return(a*x^2+b*x+c) 
+}
+x <- c(-10:10)
+y <- quad(x)
+```
+
+``` {r one}
+y2 <- quad(x, 2, 0, 0)
+y3 <- quad(x, 0, 2, 0)
+y4 <- quad(x, 0, 0, 2)
+y5 <- quad(x, 2, 2, 0)
+y6 <- quad(x, 2, 0, 2)
+y7 <- quad(x, 0, 2, 2)
+```
+
+``` {r graph}
+plot(x,y, xlim = c(-10,10), ylim = c(-2,20))
+lines(x,y2, col="red")
+lines(x,y3, col="orange")
+lines(x,y4, col="green")
+lines(x,y5, col="blue")
+lines(x,y6, col="navy")
+lines(x,y7, col="purple")
+
+```
+
+What we see from the superimposed graphs is that depending on which values are the nonzero values, the parabola of the graph is wider or narrower. When a=0, the graph becomes a straight lines because the quadratic term is canceled out. The "c" value determines the movement up and down the y axis. 
