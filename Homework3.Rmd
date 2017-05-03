@@ -1,0 +1,23 @@
+---
+title: "Homework 3"
+author: "Rebeca Berger"
+date: "March 8, 2017"
+output: html_document
+---
+
+
+``` {r take}
+rmytnorm <- function(x) {rnorm(mean, sd)
+x <- rnorm(10, mean = 0, sd=1) 
+while (x<0) {x <- rnorm(1, mean = 0, sd=1)}
+return(x)
+}
+```
+
+``` {r move}
+dmytnorm <- function(x) {dnorm(mean, sd, log = FALSE)
+x <- dnorm(1, mean = 0, sd=1, log = FALSE) 
+while (x<0) {x <- dnorm(1, mean = 0, sd=1, log = FALSE)}
+return(x)
+}
+```
